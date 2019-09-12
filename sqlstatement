@@ -1,0 +1,29 @@
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A101', 'Smith', 'John', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A102', 'Jones', 'Mike', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A103', 'Smith', 'Susan', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A104', 'Bichon', 'Peanut', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A105', 'Smith', 'John', 'Group 1');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A106', 'Kirk', 'James', 'Group 2');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A107', 'Archer', 'Jonathan', 'Group 2');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A108', 'Janeway', 'Catherine', 'Group 2');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A109', 'Sisko', 'Benjamin', 'Group 2');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A110', 'Pike', 'Christopher', 'Group 3');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A111', 'Scott', 'Montgommery', 'Group 3');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A112', 'Riker', 'William', 'Group 3');
+
+
+CREATE TABLE students( 
+       studentid   VARCHAR (20) NOT NULL, 
+       studentlastname VARCHAR (20), 
+       studentfirstname VARCHAR (20), 
+	studentgroup VARCHAR (20),
+       PRIMARY KEY (studentid) 
+);
+
+CREATE TABLE pgmgroups( 
+       programgroupid   VARCHAR (20) NOT NULL, 
+       programgroupname VARCHAR (20), 
+       classid VARCHAR (20), 
+	   sectionid VARCHAR (20)
+       PRIMARY KEY (programgroupid) 
+);
