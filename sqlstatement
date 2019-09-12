@@ -28,3 +28,8 @@ CREATE TABLE pgmgroups(
        PRIMARY KEY (programgroupid) 
 );
 1
+How to rename a COLUMN
+USE CESVERSION2;
+GO
+EXEC sp_rename 'students.studentgroup' , 'programgroup';
+GO
