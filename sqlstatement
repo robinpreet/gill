@@ -43,3 +43,16 @@ INSERT INTO pgngroups ( programgroupid, programgroupname, classid, sectionid ) V
 INSERT INTO pgngroups ( programgroupid, programgroupname, classid, sectionid ) VALUES ( '8', 'group3', 'cpct', 'b');
 INSERT INTO pgngroups ( programgroupid, programgroupname, classid, sectionid ) VALUES ( '9', 'group3', 'cpct', 'b');
 INSERT INTO pgngroups ( programgroupid, programgroupname, classid, sectionid ) VALUES ( '10', 'group1', 'cpct', 'b');
+DECLARE @ThisYearCount BIGINT,
+        @LastYearCount BIGINT,
+        @Difference  BIGINT
+
+SELECT @ThisYearCount = COUNT(*) FROM ThisYear
+
+SELECT @LastYearCount = COUNT(*) FROM LastYear
+
+SET @Difference = @ThisYearCount - @LastYearCount
+
+Print @Difference
+Select streetname, front  from thisyear
+where bedroom = 4;
