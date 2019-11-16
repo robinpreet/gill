@@ -1,0 +1,85 @@
+class Cars:
+    def __init__(self, model, make, purchased_price, sold_price, purchase_year, purchase_month, purchased_date, sold_year, sold_month, sold_date):
+        self.model = model
+        self.make = make
+        self.purchased_price = purchased_price
+        self.sold_price = sold_price
+        self.purchase_year = purchase_year
+        self.purchase_month = purchase_month
+        self.purchased_date = purchased_date
+        self.sold_year = sold_year
+        self.sold_month = sold_month
+        self.sold_date = sold_date
+
+
+
+    def getmodel(self):
+        return self.model
+    def setmodel(self, newmodel):
+        self.model = newmodel
+
+    def getmake(self):
+        return self.make
+    def setmake(self, newmake):
+        self.make = newmake
+
+    def getpurchase_price(self):
+        return self.purchased_price
+    def setpurchase_price(self, newpurchase_price):
+        self.purchase_price = newpurchase_price
+
+    def getsold_price(self):
+        return self.sold_price
+
+    def setsold_price(self, newsold_price):
+            self.sold_price = newsold_price
+
+    def getpurchase_year(self):
+            return self.year
+
+    def setpurchase_year(self, newpurchase_year):
+            self.purchase_year = newpurchase_year
+
+    def getpurchase_month(self):
+            return self.purchase_month
+
+    def setpurchase_month(self, newpurchase_month):
+            self.purchase_month = newpurchase_month
+
+    def getpurchase_date(self):
+            return self.purchase_month
+
+    def setpurchase_date(self, newpurchase_date):
+            self.purchase_date = newpurchase_date
+
+    def getsold_year(self):
+            return self.sold_year
+
+    def setsold_year(self, newsold_year):
+            self.sold_year = newsold_year
+
+    def getsold_month(self):
+            return self.sold_month
+
+    def setsold_month(self, newsold_month):
+            self.sold_month = newsold_month
+
+    def getsold_date(self):
+            return self.sold_date
+
+    def setsold_date(self, newsold_date):
+            self.sold_date = newsold_date
+
+    c1 = car(1998, "bmw", 20000, 18000, 2000, 10, 12, 2003, 05, 31)
+    c2 = car(2012, "mustang", 60000, 40000, 2015, 11, 13, 2007, 5, 19)
+    c3 = car(2015, "charger", 55000, 35000, 1105, 20, 15, 1307, 20, 17)
+    c4 = car(2016, "challenger", 50000, 36000, 1710, 20, 16, 2112, 20, 18)
+
+    print(c1.getmake())
+
+    car_sold_date = datetime.datetime(c1.getsold_year(), c1.getsold_month(), c1.getsold_date())
+    car_purchase_date = datetime.datetime(c1.getpurchase_year(), c1.getpurchase_month(), c1.getpurchase_date())
+
+    diff = car_sold_date - car_purchase_date
+
+    print(diff)
