@@ -1,0 +1,30 @@
+DECLARE @averageSellingPrice as INT;
+DECLARE @sumSellingPrice as INT;
+DECLARE @numberOfRecords as INT;
+declare @soldprice as INT; 
+declare @community as varchar(40); 
+declare @address as varchar(40); 
+declare @type as varchar(12); 
+
+SET @numberOfRecords = 0; 
+
+DECLARE @ThisYearDataCursor as Cursor;
+
+SET @ThisYearDataCursor = CURSOR for
+
+	Select type1, community, soldprice, address 
+	from whitbycurrent;
+
+open @ThisYearDataCursor 
+
+While @@Fetch_Status = 0
+ 
+BEGIN
+	if @type = 'Detached' 
+	
+	PRINT @soldprice;
+	Print @type; 
+	Print @address; 
+	fetch next from @ThisYearDataCursor  into @type, @community, @soldprice, @address
+	
+END
